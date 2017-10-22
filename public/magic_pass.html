@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>매점 매직패스</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/> -->
+    <link type="text/css" rel="stylesheet" href="/css/materialize.css"  media="screen,projection"/>
+    <style> #CONTENTS{ min-height: 600px; }</style>
+  </head>
+  <body>
+
+    <!-- 상단 네비게이션 -->
+    <nav class=" light-blue darken-3">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="login.html" class="breadcrumb">CMP</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 내용 부분 -->
+    <div class="container" id="CONTENTS" >
+      <form id="FRM">
+        <div class="row z-depth-3">
+            <br><br>
+            <div class="col s12"><h3>매점 매직 패스</h3></div>
+
+            <div class="col l12 m12 s12"><br><br></div>
+
+            <div class="col l7 m7 s7 input-field">
+               <a class="waves-effect  light-blue darken-4 btn right" id = "BTN_MAGIC_PASS"><i class="material-icons left">send</i>매점 줄서기 예약</a>
+              <div class="col l12 m12 s12"><br><br></div>
+       </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- 바닥글 영역 -->
+    <footer class="page-footer  light-blue darken-3">
+      <div class="container">
+      <div class="footer-copyright">
+        <div class="container">
+        Copyright &copy; SSM
+        <a class="white-text right" >developed by ITKOO</a>
+        </div>
+      </div>
+      </div>
+    </footer>
+
+
+<!-- /////////////////////////////////// javascript 스크립트 영역 /////////////////////////////////// -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+
+  var count  = 0;
+  $('#BTN_MAGIC_PASS').click(function()
+  {
+      count++;
+      console.log("매직패스 버튼 누름!!");
+      console.log(count + "를 누름");
+
+  });
+
+ </script>
+
+  </body>
+</html>

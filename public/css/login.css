@@ -1,0 +1,36 @@
+body
+{
+    background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+img
+{
+  width: 200px;
+  height:100px;
+}
+
+h4
+{
+  color: #1b5e20;
+}
+
+a
+{
+    color: #1b5e20;
+}
+
+a:hover
+{
+    color: #fff;
+    /*background-color: #1b5e20;*/
+    text-shadow:
+   -1px -1px 0 #1b5e20,
+    1px -1px 0 #1b5e20,
+    -1px 1px 0 #1b5e20,
+     1px 1px 0 #1b5e20;
+
+}

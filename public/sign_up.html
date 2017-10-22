@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>CMP 회원가입 페이지</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/login.css"  media="screen,projection"/>
+  <style> #CONTENTS{ min-height: 800px;}</style>
+
+</head>
+
+<body>
+
+
+  <div class="container" id="CONTENTS">
+
+    <center>
+      <br>  <br>  <br>
+    <div class = "card-large">
+
+    <form id="FRM">
+    <div class="row">
+      <center><h4>SIGN UP</h4></center><br><br>
+
+      <div class="input-field col s12">
+        <!-- 로그인 메일 주소 입력 폼 -->
+        <input id="loginMail" placeholder="메일 주소를 입력하세요" type="email" class="validate">
+        <label for="loginMail" style="text-align : left">Email</label>
+      </div>
+
+
+      <div class="input-field col s12">
+        <!-- 패스워드 입력 폼 -->
+        <input id="loginPassword" placeholder="비밀 번호를 입력하세요" type="password" class="validate">
+        <label for="loginPassword" style="text-align : left">Password</label>
+      </div>
+
+      <div class="input-field col s12">
+        <!-- 이름 입력 폼 -->
+        <input id="userName" placeholder="이름을 입력하세요" type="password" class="validate">
+        <label for="userName" style="text-align : left">Password</label>
+      </div>
+
+      <div class="input-field col s12">
+        <!--  인증코드 입력 폼 -->
+        <input id="pinCode" placeholder="학교 인증 코드를 입력하세요" type="password" class="validate">
+        <label for="pinCode" style="text-align : left">Pin Code</label>
+      </div>
+
+      <div class="input-field col s12">
+        <!-- 로그인 버튼  -->
+        <br><center><button id="BTN_SIGNUP" type="button" class="btn right green darken-3"> 회 원 가 입 하 기 </button></center>
+      </div>
+
+      <div class="input-field col s12">
+        <br>
+        <p class="text"><center><a href="login.html"> &nbsp;로그인 페이지로 돌아가기</a></center></p>
+        <br>
+      </div>
+
+    </div> <!-- end of row div-->
+   </form>
+   </div> <!-- end card-content div -->
+ </center>
+  </div> <!-- end container div -->
+
+
+<!-- /////////////////////////////////// javascript 스크립트 영역 /////////////////////////////////// -->
+
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+  <!-- firebase SDK 링크 -->
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase-storage.js"></script>
+  <script src="fireinit.js"></script>
+
+  <script type="text/javascript">
+  </script>
+</body>
+<html>
