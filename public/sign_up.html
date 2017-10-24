@@ -28,27 +28,27 @@
 
       <div class="input-field col s12">
         <!-- 로그인 메일 주소 입력 폼 -->
-        <input id="loginMail" placeholder="메일 주소를 입력하세요" type="email" class="validate">
-        <label for="loginMail" style="text-align : left">Email</label>
+        <input id="EMAIL" placeholder="메일 주소를 입력하세요" type="email" class="validate">
+        <label for="EMAIL" style="text-align : left">Email</label>
       </div>
 
 
       <div class="input-field col s12">
         <!-- 패스워드 입력 폼 -->
-        <input id="loginPassword" placeholder="비밀 번호를 입력하세요" type="password" class="validate">
-        <label for="loginPassword" style="text-align : left">Password</label>
+        <input id="PASSWORD" placeholder="비밀 번호를 입력하세요" type="password" class="validate">
+        <label for="PASSWORD" style="text-align : left">Password</label>
       </div>
 
       <div class="input-field col s12">
-        <!-- 이름 입력 폼 -->
-        <input id="userName" placeholder="이름을 입력하세요" type="password" class="validate">
-        <label for="userName" style="text-align : left">Password</label>
+        <!-- 이름 메일 주소 입력 폼 -->
+        <input id="NAME" placeholder="이름을 입력하세요" type="text" class="validate">
+        <label for="NAME" style="text-align : left">Name</label>
       </div>
 
       <div class="input-field col s12">
         <!--  인증코드 입력 폼 -->
-        <input id="pinCode" placeholder="학교 인증 코드를 입력하세요" type="password" class="validate">
-        <label for="pinCode" style="text-align : left">Pin Code</label>
+        <input id="PINCODE" placeholder="학교 인증 코드를 입력하세요" type="text" class="validate">
+        <label for="PINCODE" style="text-align : left">Pin Code</label>
       </div>
 
       <div class="input-field col s12">
@@ -86,6 +86,42 @@
   <script src="fireinit.js"></script>
 
   <script type="text/javascript">
+
+    var database = firebase.database();
+
+    //uid 받기위해 회원가입 사용자 유저
+    var cmp_user;
+
+    $('#BTN_SIGNUP').click(function()
+    {
+      // 메일
+      var email = $("#EMAIL").val();
+      // 비밀번호
+      var password = $("#PASSWORD").val();
+      //유저 이름
+      var name = $("#NAME").val();
+
+      // 핀 코드(학교별 인증 코드)
+      var pinCode = $("#PINCODE").val();
+
+      //메일 회원가입에 성공했을 경우
+      firebase.auth().createUserWithEmailAndPassword(email, password).then(
+        function()
+        {
+              // 회원 정보 갱신 = 페이지 새로 고침
+              alert("CMP 가입을 축하드립니다!");
+              window.location.href="index.html?" + name + "?";
+
+            }, function(error)
+            {
+                console.log(error);
+                alert(error.message);
+            });
+            // 자동 로그인 성공으로 간주 = onAuthStateChanged() 가 동작함
+            }).catch(function(error){
+            //메일 회원 가입에 실패 했을 때
+            alert(error.message);
+            });
   </script>
 </body>
 <html>

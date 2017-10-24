@@ -109,6 +109,7 @@
 
       firebase.auth().signInWithEmailAndPassword(loginMail, loginPassword).then(function()
       {
+        alert("CMP 로그인 성공!");
         console.log("유저 아이디 : "+ user.uid);
         window.location.href="index.html?" + btnVisible + "?";
         // 메일 회원  로그인 성공으로 간주 = onAuthStateChanged()가 동작함
